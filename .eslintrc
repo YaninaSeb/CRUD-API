@@ -31,7 +31,8 @@
       "props": false
       }], 
       "comma-dangle": "off",
-      "@typescript-eslint/comma-dangle": ["error", "only-multiline"]
+      "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
+      "@typescript-eslint/brace-style": "off"
     },
     "ignorePatterns": ["*config.js"]
   }

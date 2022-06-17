@@ -25,8 +25,7 @@ export const createUser = (request, response) => {
         
                 response.writeHead(201, { 'Content-Type': 'application/json' });
                 response.end(JSON.stringify(newUser));
-            } 
-            else {
+            } else {
                 const messageError = { message: 'Request is invalid' };
                 writeError(response, 400, messageError);
             }

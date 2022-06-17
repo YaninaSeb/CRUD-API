@@ -8,13 +8,11 @@ export const deleteUser = (request, response) => {
 
     if (isValidateId(id)) {
         let hasID: boolean;
-        let userById: IUser;
         let userIndex: number;
 
         data.forEach((user: IUser, index: number) => {
             if (user.id == id ) {
                 hasID = true;
-                userById = user;
                 userIndex = index;
             }
         });

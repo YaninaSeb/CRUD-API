@@ -4,6 +4,7 @@ import { getUsers } from './methods/getUsers';
 import { getUserById } from './methods/getUserById';
 import { writeError } from './utils/setError';
 import { createUser } from './methods/createUser';
+import { deleteUser } from './methods/deleteUser';
 
 dotenv.config();
 
@@ -19,6 +20,9 @@ const server = http.createServer((req, res) => {
         } 
         else if (req.method == 'POST' && req.url == '/api/users') {
             createUser(req, res);
+        } 
+        else if (req.method == 'DELETE' && (req.url).match(/^\/api\/users\/[\w-]+$/)) {
+            deleteUser(req, res);
         } 
         else {
             writeError(res, 404, { message: 'Request not found' });

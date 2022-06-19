@@ -18,8 +18,9 @@ module.exports = {
       ],
     },
     resolve: {
-      extensions: ['.ts', '.js'],
+      extensions: ['.ts', '.js', '.mjs'],
     },
+    target: 'node',
     plugins: [
       new ESLintPlugin({ extensions: ['ts', 'js'] })
     ]

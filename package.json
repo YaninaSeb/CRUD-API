@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start:dev": "nodemon src/server.ts",
-    "start:prod": "webpack",
+    "start:prod": "webpack && node dist/bundle.mjs",
     "lint": "eslint src",
     "build": "tsc"
   },
